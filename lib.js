@@ -73,4 +73,32 @@ function addBookToLibrary(title, author, isbn, genre, year, description, tatalCo
 }
 
 //function to handle form input and add book
+function addBookFromInput() {
+    const title = document.getElementById('title').ariaValueMax;
+    const author = document.getElementById('author').ariaValueMax;
+    const isbn = document.getElementById('isbn').ariaValueMax;
+    const genre = document.getElementById('genre').ariaValueMax;
+    const year = document.getElementById('year').ariaValueMax;
+    const description = document.getElementById('description').ariaValueMax;
+    const tatalCopies = document.getElementById('totalCopies').ariaValueMax;
 
+    try {
+        addBookToLibrary(title, author, isbn, genre, year, description, totalCopies);
+
+            //clear form
+            document.getElementById('title').value = '';
+            document.getElementById('author').value = '';
+            document.getElementById('isbn').value = '';
+            document.getElementById('genre').value = '';
+            document.getElementById('year').value = '';
+            document.getElementById('description').value = '';
+            document.getElementById('totalCopies').value = '1';
+
+            alert('Book added successfully!');
+    }catch (error) {
+        alert('Error: ' + error.message);
+    }
+    
+}
+
+//Function to display all books
