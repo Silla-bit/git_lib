@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library System</title>
+    <link rel="lib.css" href="">
+</head>
+<body>
+    <h1>Book Library System</h1>
+    <div id="bookForm">
+        <h2>Add New Book</h2>
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="author" placeholder="Author" required>
+        <input type="text" id="isbn" placeholder="ISBN" required>
+        <input type="text" id="genre" placeholder="Genre" required>
+        <input type="number" id="year" placeholder="Publication Year">
+        <textarea id="description" placeholder="Description"></textarea>
+        <input type="number" id="totalCopies" placeholder="Total Copies" value ="1" required>
+        <button onclick="addBookFromInput()">Add Book</button>
+    </div>
+    <div id="booksContainer">
+        <h2>Books in Library</h2>
+        <div id="booksList"></div>
+    </div>
+    <script src="lib.js"></script>
+</body>
+</html>
